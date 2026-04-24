@@ -88,7 +88,9 @@ P("Uncertainty representation in applied mathematics has evolved through classic
   "We conclude that neutrosophic and affine arithmetic occupy complementary positions: affine for engineering "
   "precision with multi-source tracking, neutrosophic for semantic transparency, broader qualitative scope, "
   "and natural hesitant-evidence consolidation. "
-  "A reference implementation is released as open-source code.")
+  "A reference Python implementation is released under MIT License at "
+  "https://github.com/mleyvaz/neutrosophic-affine, enabling full reproduction of all theorems, "
+  "examples, benchmarks, and figures in this paper.")
 
 p = doc.add_paragraph()
 p.add_run("Keywords: ").bold = True
@@ -490,9 +492,20 @@ P("Neutrosophic and affine arithmetic are complementary, not competing. Affine a
 # ============== AVAILABILITY ==============
 H("Code and Data Availability", 1)
 P("A Python reference implementation of all four formalisms (interval, affine, classical neutrosophic, "
-  "MSNN), together with the fifteen-expression benchmark and figure generation scripts, is released as "
-  "open-source code. Repository: https://github.com/mleyvaz/neutrosophic-affine (pending). "
-  "Archived version: Zenodo DOI (pending publication).")
+  "MSNN) together with the hesitant extension, the fifteen-expression benchmark, and figure-generation "
+  "scripts is released as open-source code under the MIT License at:")
+p = doc.add_paragraph()
+p.paragraph_format.left_indent = Cm(1.2)
+r = p.add_run("https://github.com/mleyvaz/neutrosophic-affine")
+r.bold = True
+r.font.size = Pt(11)
+P("The repository includes: (i) five Python modules — interval.py, affine.py, neutrosophic.py, msnn.py, "
+  "hesitant.py; (ii) a sanity-test suite verifying Theorems 1 and 2 empirically on ten representative "
+  "expressions; (iii) the benchmark script bench_all.py producing bench_results.csv for fifteen "
+  "algebraic expressions; (iv) four figure-generation scripts corresponding to Figures 1–4; and (v) a "
+  "regeneration script for this paper. All results reported in Sections 3, 4, 5 and 6 can be reproduced "
+  "by running the scripts in order documented in the repository README. A permanent archival DOI will "
+  "be issued via Zenodo upon acceptance.")
 
 H("Acknowledgments", 1)
 P("The authors thank the Neutrosophic Science International Association and Universidad Bolivariana del "
